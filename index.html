@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIB Phone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="notification" class="top-notification hidden">
+    <div class="n-app">Beskeder</div>
+    <div class="n-title">Kontakt</div>
+    <div class="n-text">Besked</div>
+  </div>
+
+  <div id="phone" class="phone wallpaper-1">
+    <div class="side-buttons">
+      <span class="btn-mute"></span>
+      <span class="btn-vol btn-vol-up"></span>
+      <span class="btn-vol btn-vol-down"></span>
+      <span class="btn-power"></span>
+    </div>
+
+    <div class="screen">
+      <div class="dynamic-island"></div>
+      <div class="statusbar">
+        <span id="clock">12:00</span>
+        <div class="status-icons"><span>5G</span><span class="wifi">◔</span><span class="battery"><i></i></span></div>
+      </div>
+
+      <div id="home" class="page active home-page">
+        <div class="app-grid">
+          <button class="app" data-app="messages"><div class="icon messages"><img data-icon="messages" src="img/icons/message.png" alt=""><em id="messagesBadge" class="app-badge hidden">0</em></div><span>Beskeder</span></button>
+          <button class="app" data-app="calls"><div class="icon calls"><img data-icon="calls" src="img/icons/calls.png" alt=""></div><span>Opkald</span></button>
+          <button class="app" data-app="contacts"><div class="icon contacts"><img data-icon="contacts" src="img/icons/contacts.png" alt=""></div><span>Kontakter</span></button>
+          <button class="app" data-app="twitter"><div class="icon twitter"><img data-icon="twitter" src="img/icons/twitter.png" alt=""></div><span>Twitter</span></button>
+          <button class="app" data-app="camera"><div class="icon camera"><img data-icon="camera" src="img/icons/camera.png" alt=""></div><span>Kamera</span></button>
+          <button class="app" data-app="photos"><div class="icon photos"><img data-icon="photos" src="img/icons/photos.png" alt=""></div><span>Fotos</span></button>
+          <button class="app" data-app="settings"><div class="icon settings"><img data-icon="settings" src="img/icons/settings.png" alt=""></div><span>Settings</span></button>
+        </div>
+        <div class="page-dots"><span class="dot active"></span></div>
+        <div class="dock">
+          <button data-app="calls"><img data-icon="calls" src="img/icons/calls.png" alt=""></button>
+          <button data-app="messages" class="dock-msg"><img data-icon="messages" src="img/icons/message.png" alt=""><em id="messagesDockBadge" class="app-badge dock-badge hidden">0</em></button>
+          <button data-app="twitter"><img data-icon="twitter" src="img/icons/twitter.png" alt=""></button>
+          <button data-app="settings"><img data-icon="settings" src="img/icons/settings.png" alt=""></button>
+        </div>
+      </div>
+
+      <div id="appView" class="page app-view">
+        <div id="appContent" class="app-content"></div>
+      </div>
+
+      <div id="callView" class="page call-view">
+        <div class="call-name" id="callName">Opkald</div>
+        <div class="call-number" id="callNumber">Ukendt</div>
+        <div class="call-status" id="callStatus">Ringer...</div>
+        <div class="call-controls">
+          <button id="muteBtn">🎙<span>Mute</span></button>
+          <button id="speakerBtn">🔊<span>Højtaler</span></button>
+          <button>＋<span>Tilføj</span></button>
+        </div>
+        <button id="answerBtn" class="answer hidden">☎</button>
+        <button id="hangupBtn" class="hangup">⌕</button>
+      </div>
+
+      <div id="miniCall" class="mini-call hidden">
+        <div class="mini-pill"><span class="mini-wave"></span><div><b id="miniCallName">Opkald</b><small id="miniCallStatus">I opkald</small></div></div>
+      </div>
+      <div id="toast" class="toast hidden"></div>
+      <button id="homeBar" class="homebar"></button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
